@@ -1,0 +1,47 @@
+*{
+	font-family:Tahoma, Geneva, sans-serif;	
+	margin:0;
+	padding:0;
+}
+
+a.logo{
+	display:block;
+	margin:0 auto;
+	width: 102px; 
+  	height: 110px;
+  	background: url("../images/net-head logo.png");
+  	text-indent: -9999px;	
+}
+
+header > h2{
+	color:white;	
+}
+
+article > div{
+	border-left:black 1px solid;
+	border-bottom:black 1px solid;
+	width:33%;
+	height:135px;
+	float:left;
+}
+
+article > div:first-child{
+	border-left:none;	
+}
+
+div > p{
+	display:block;
+	clear:both;
+	text-align:center;	
+	font-size:18px;
+	margin-top:0;
+}
+
+article.ui-content{
+	padding:0;	
+}
+
+.flex-direction-nav a{
+	display:none;	
+}
+
