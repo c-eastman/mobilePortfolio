@@ -4,37 +4,83 @@
 	padding:0;
 }
 
-a.logo{
+div.menu{
+	width:33%;	
+	float:left;
+
+}
+
+div.menu > a{
+	text-decoration:none;
+	color:#3a87b5;
+}
+/*a.logo{
 	display:block;
 	margin:0 auto;
-	width: 102px; 
-  	height: 110px;
+	width: 70px; 
+  	height: 75px;
   	background: url("../images/net-head logo.png");
   	text-indent: -9999px;	
+}*/
+
+a > .logo{
+	float:left;	
 }
 
 header > h2{
 	color:white;	
 }
 
-article > div{
+/*article > div{
 	border-left:black 1px solid;
 	border-bottom:black 1px solid;
 	width:33%;
-	height:135px;
+	height:100px;
 	float:left;
+}*/
+
+article > a{
+	text-decoration:none;
+	color:#3a87b5;
 }
 
-article > div:first-child{
+/*article > div:first-child{
 	border-left:none;	
+}*/
+.menu2{
+	position:relative;
+	left:.5%;	
+}
+div.pic{
+	float:left;
+	display:block;
+	height:70px;
+	width:49%;
+	border:1px solid #3a87b5;	
+	border-radius:8px;
 }
 
-div > p{
-	display:block;
-	clear:both;
-	text-align:center;	
-	font-size:18px;
-	margin-top:0;
+div.pic > p{
+	margin-top:30px;
+	font-size:85%;
+}
+div.pic > img{
+	float:left;
+	margin-left:30%;	
+	margin-right:5%;
+}
+
+footer > a{
+	width:100%;
+	margin:0 auto;
+	color:white;	
+}
+
+.service{
+	margin-top:5px;	
+}
+a{
+	color:#3a87b5;	
 }
 
 article.ui-content{
@@ -45,3 +91,6 @@ article.ui-content{
 	display:none;	
 }
 
+#main_content > h1{
+	text-align:center;	
+}
