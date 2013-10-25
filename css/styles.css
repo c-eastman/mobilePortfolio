@@ -6,7 +6,7 @@
 	Since: October 22, 2013
 */
 
-/*Cleanup*/
+/*initial settings*/
 *{
 	font-family:Tahoma, Geneva, sans-serif;	
 	margin:0;
@@ -164,3 +164,23 @@ article.ui-content{
 }
 
 /*End Services Page*/
+
+/*Contact Page*/
+
+#contactPage{
+	padding:10px;		
+}
+
+#contactPage > a{
+	text-align:center;
+	margin:0 auto;
+	display:block;	
+}
+#contactPage > h1:first-child{
+	margin-bottom:10px;
+}
+#contactPage > h1 + p + a + h1{
+	margin-top:15px;
+	margin-bottom:10px;	
+}
+/*End Contact page*/
