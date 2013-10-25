@@ -3,14 +3,18 @@
 	Site: net-head.ca/mobile
 	File Name: styles.css
 	Description: css
-	Since: October 23, 2013
+	Since: October 22, 2013
 */
+
+/*Cleanup*/
 *{
 	font-family:Tahoma, Geneva, sans-serif;	
 	margin:0;
 	padding:0;
 }
 
+/*Main Styles*/
+/*Nav*/
 div.menu{
 	width:33%;	
 	float:left;
@@ -25,14 +29,6 @@ div.menu > a{
 	color:#3a87b5;
 }
 
-header > h2{
-	color:white;	
-}
-
-article > a{
-	text-decoration:none;
-	color:#3a87b5;
-}
 .menu2{
 	position:relative;
 	left:.5%;	
@@ -52,25 +48,38 @@ div.pic > p{
 	margin-top:5px;
 	text-align:center;
 }
+
 div.pic > img{
 	display:block;
 	
 	margin:0 auto;
 }
-footer{
-	padding-bottom:5px;	
-}
-footer > a{
-	width:100%;
-	margin:0 auto;
-	color:white;	
-}
 
 .service{
 	margin-top:5px;	
 }
+
 a{
 	color:#3a87b5;	
+}
+/*End Nav*/
+header > h2{
+	color:white;	
+}
+
+article > a{
+	text-decoration:none;
+	color:#3a87b5;
+}
+
+footer{
+	padding-bottom:5px;	
+}
+
+footer > a{
+	width:100%;
+	margin:0 auto;
+	color:white;	
 }
 
 article.ui-content{
@@ -84,12 +93,13 @@ article.ui-content{
 .main_content > h1{
 	text-align:center;	
 }
+/*End main Styles*/
 
-.main_content > img#chris{
+/*About Page*/
+#aboutPage > img#chris{
 	display:block;
 	float:right;	
 	margin:12px;
-	
 }
 
 #aboutPage > p{
@@ -98,6 +108,10 @@ article.ui-content{
 	margin-bottom:15px;	
 }
 
+/*End about page*/
+
+
+/*Projects Page*/
 #projectsPage > div{
 	width:40%;
 	height:200px;	
@@ -128,3 +142,25 @@ article.ui-content{
 	float:none;
 }
 
+/*End projects Page*/
+
+
+/*Services Page*/
+#servicesPage{
+	padding:10px;
+	text-align:justify;	
+}
+
+#servicesPage > h1{
+	margin-bottom:20px;	
+}
+
+#servicesPage > p{
+	margin-bottom:10px;	
+}
+
+#servicesPage > ul{
+	margin-bottom:10px;	
+}
+
+/*End Services Page*/

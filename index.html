@@ -2,8 +2,8 @@
 	Author: Chris Eastman
 	Site: net-head.ca/mobile
 	File Name: index.html
-	Description: jquery mobile index file (includes all pages)
-	Since: October 23, 2013
+	Description: jquery mobile index file (includes all pages as sections with data-role="page")
+	Since: October 22, 2013
 -->
 
 <!DOCTYPE html>
@@ -16,12 +16,9 @@
 		<link rel="stylesheet" href="themes/net-head.min.css" />
         <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="css/styles.css" type="text/css"/>
-        
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css" />
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-        
-		<script src="js/script.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>     
 	</head>
 	
 	<body>
@@ -201,6 +198,7 @@
                     	<img src="images/taskbeast.jpg" alt="task beast" />
                     </a>
                 </div>
+                </section>
             <!-- Main content end-->
             
 			<!-- Footer -->
@@ -208,7 +206,84 @@
             	<h3>Copyright &copy; Chris Eastman 2013</h3>
             </footer>
         </section>
+        <!-- End projects page-->
         
+        <!-- Begin Services Page-->
+		<section id="services" data-role="page">
+        	<header data-role="header">
+            	<a href="#" alt="back" data-rel="back" data-icon="back" data-role="button" data-iconpos="notext" data-transition="slide">Back</a>
+                <h1>Get the 'net</h1>
+            </header>
+            <article data-role="content">               
+                <!-- Begin Navigation-->
+                <div class="menu">
+                	<a href="#home" alt="home" data-icon="home" data-role="button" >Home</a>
+        		</div>
+                <div class="menu">
+                	<a href="#about" alt="about me" data-icon="info" data-role="button" >About</a>
+        		</div>
+                <div class="menu">
+                	<a href="#contact" alt="contact" data-icon="gear" data-role="button" >Contact</a>
+        		</div>
+                 
+                 <div class="menu2">
+                 	<a href="#projects">
+                 		<div class="pic">
+                 			<img src="images/net-head logo.png" alt="projects"/>
+                    		<p>Projects</p>
+                 		</div>
+                 	</a>
+                    <a href="#">
+                 		<div class="pic">
+                 		<img src="images/services.png" alt="services" class="service"/>
+                    		<p>Services</p>
+                 		</div>
+                 	</a>
+                 </div>
+                 <!-- End Navigation-->
+			</article>
+            
+            <!-- Main Content Begin-->
+            <section class="main_content" id="servicesPage">
+            	<h1>Services</h1>
+                <p>Over the paste fiew years I have picked up a lot of skills and tricks of the trade while studying at Georgian College. I have designed and developed web sites in a variety of ways. I have learned how to include dynamic, changing content to pages with languages such as Javascript as well as learning Responsive design. I have also worked with server-side programming for interaction with databases.</p>
+                
+                <p>Other than web, there has been a lot of study in desktop development as well, such as small windows forms applications, and flash animations. I have also been taught certain ways to interact with mainframes and files using languages like Cobol and JCL.</p>
+                
+                <p>I have some experience creating arduino - projects such as a <a href="http://www.youtube.com/watch?v=7FliFCBSWKg" alt="My Arduino Simon Says">Simon-Says</a> type game using an arduino board, buttons, LEDs and a lot of code!</p>
+                
+                <p>Following is a list of languages I have experience in:</p>
+                
+                <ul>
+                	<li>HTML / HTML 5</li>
+                    <li>Javascript / JQuery</li>
+                    <li>CSS / CSS3</li>
+                    <li>PHP</li>
+                    <li>ASP.NET</li>
+                	<li>SQL</li>
+                    <li>XML</li>
+                    <li>Java</li>
+                    <li>C++ / NXC</li>
+                    <li>VB</li>
+                    <li>Cobol</li>
+                    <li>JCL</li>
+                </ul>
+                
+                <p>With the way the web and computer industry is growing, I must stay on top of things, and my code expertese will be always expanding. I'm always excited to learn something new!</p>
+                 </section>
+            <!-- Main content end-->
+            
+			<!-- Footer -->
+            <footer data-role="footer" data-position="fixed">
+            	<h3>Copyright &copy; Chris Eastman 2013</h3>
+            </footer>
+        </section>
+        <!-- End Services Page-->
+        
+        <!-- Contact Page Begin-->
+        <section id="contact" data-role="page">
+        
+        </section>      
         
         
         
