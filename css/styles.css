@@ -1,3 +1,10 @@
+/*
+	Author: Chris Eastman
+	Site: net-head.ca/mobile
+	File Name: styles.css
+	Description: css
+	Since: October 23, 2013
+*/
 *{
 	font-family:Tahoma, Geneva, sans-serif;	
 	margin:0;
@@ -7,7 +14,6 @@
 div.menu{
 	width:33%;	
 	float:left;
-
 }
 
 .ui-btn-text {
@@ -92,4 +98,33 @@ article.ui-content{
 	margin-bottom:15px;	
 }
 
+#projectsPage > div{
+	width:40%;
+	height:200px;	
+	float:left;
+	margin:4%;
+	margin-bottom:0;
+	margin-top:0;
+	text-align:center;
+}
+
+#projectsPage > h1{
+	margin-top:15px;
+	margin-bottom:15px;	
+}
+
+#projectsPage > div > a > img{
+	width:95%;
+	display:block;
+	margin:0 auto;	
+}
+
+#projectsPage > div > a > img.zen{
+	margin-top:30px;	
+}
+
+#projectsPage > div#taskbeast{
+	margin:0 auto;	
+	float:none;
+}
 
