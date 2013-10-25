@@ -10,43 +10,23 @@ div.menu{
 
 }
 
+.ui-btn-text {
+	font-size:80%;
+}
+
 div.menu > a{
 	text-decoration:none;
 	color:#3a87b5;
-}
-/*a.logo{
-	display:block;
-	margin:0 auto;
-	width: 70px; 
-  	height: 75px;
-  	background: url("../images/net-head logo.png");
-  	text-indent: -9999px;	
-}*/
-
-a > .logo{
-	float:left;	
 }
 
 header > h2{
 	color:white;	
 }
 
-/*article > div{
-	border-left:black 1px solid;
-	border-bottom:black 1px solid;
-	width:33%;
-	height:100px;
-	float:left;
-}*/
-
 article > a{
 	text-decoration:none;
 	color:#3a87b5;
 }
-
-/*article > div:first-child{
-	border-left:none;	
-}*/
 .menu2{
 	position:relative;
 	left:.5%;	
@@ -54,22 +34,26 @@ article > a{
 div.pic{
 	float:left;
 	display:block;
-	height:70px;
+	height:90px;
 	width:49%;
 	border:1px solid #3a87b5;	
 	border-radius:8px;
 }
 
 div.pic > p{
-	margin-top:30px;
 	font-size:85%;
+	clear:both;
+	margin-top:5px;
+	text-align:center;
 }
 div.pic > img{
-	float:left;
-	margin-left:30%;	
-	margin-right:5%;
+	display:block;
+	
+	margin:0 auto;
 }
-
+footer{
+	padding-bottom:5px;	
+}
 footer > a{
 	width:100%;
 	margin:0 auto;
@@ -91,6 +75,21 @@ article.ui-content{
 	display:none;	
 }
 
-#main_content > h1{
+.main_content > h1{
 	text-align:center;	
 }
+
+.main_content > img#chris{
+	display:block;
+	float:right;	
+	margin:12px;
+	
+}
+
+#aboutPage > p{
+	text-align:justify;
+	margin:10px;
+	margin-bottom:15px;	
+}
+
+

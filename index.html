@@ -17,71 +17,182 @@
 	</head>
 	
 	<body>
+    	<!-- Begin Home page-->
     	<section id="home" data-role="page">
             <header data-role="header">
-           <!-- <a href="#home" alt="Home" data-role="button" data-mini="true" data-icon="home" data-iconpos="notext">Home</a>-->
                 <h1>Get the 'net</h1>
             </header>
-            <article data-role="content">
-			
-               
+            <article data-role="content">               
+                <!-- Begin Navigation-->
                 <div class="menu">
-                	<a href="#" alt="home" data-icon="home" data-role="button" class="big">Home</a>
+                	<a href="#" alt="home" data-icon="home" data-role="button" >Home</a>
         		</div>
                 <div class="menu">
-                	<a href="#" alt="about me" data-icon="info" data-role="button" class="big">About Me</a>
+                	<a href="#about" alt="about me" data-icon="info" data-role="button" >About</a>
         		</div>
                 <div class="menu">
-                	<a href="#" alt="contact" data-icon="gear" data-role="button" class="big">Contact Me</a>
+                	<a href="#contact" alt="contact" data-icon="gear" data-role="button" >Contact</a>
         		</div>
                  
                  <div class="menu2">
-                 <a href="#">
-                 <div class="pic">
-                 	<img src="images/net-head logo.png" alt="projects"/>
-                    <p>Projects</p>
-                 </div>
+                 	<a href="#projects">
+                 		<div class="pic">
+                 			<img src="images/net-head logo.png" alt="projects"/>
+                    		<p>Projects</p>
+                 		</div>
                  	</a>
-                    <a href="#">
-                 <div class="pic">
-                 <img src="images/services.png" alt="services" class="service"/>
-                    <p>Services</p>
+                    <a href="#services">
+                 		<div class="pic">
+                 		<img src="images/services.png" alt="services" class="service"/>
+                    		<p>Services</p>
+                 		</div>
+                 	</a>
                  </div>
-                 </a>
-                 </div>
+                 <!-- End Navigation-->
 			</article>
+            
+            <!-- Provided and copyrighted by flexslider-->
             <div class="flexslider">
             	<ul class="slides">
                     <li>
-                      <img src="images/welcome_slide.jpg" id="link_slide4"/>
+                      <img src="images/welcome_slide.jpg" alt="welcome slide"/>
                     </li>
                     <li>
-                      <img src="images/css_zengarden.jpg" id="link_slide1"/>
+                      <img src="images/css_zengarden.jpg" alt="css zengarden"/>
                     </li>
                     <li>
-                      <img src="images/trading_card.jpg" id="link_slide2"/>
+                      <img src="images/trading_card.jpg" alt="trading card"/>
                     </li>
                     <li>
-                      <img src="images/robo_maker.jpg" id="link_slide3"/>
+                      <img src="images/robo_maker.jpg" alt="robo maker"/>
                     </li>
                </ul>
 			</div>
+            <!--End flexslider -->
             
-            <section id="main_content">
+            <!-- Main Content Begin-->
+            <section class="main_content" id="homePage">
             	<h1>Welcome to Net-Head!</h1>
             </section>
+            <!-- Main content end-->
             
-            
+			<!-- Footer -->
             <footer data-role="footer" data-position="fixed">
             	<h3>Copyright &copy; Chris Eastman 2013</h3>
                  <a href="http://www.net-head.ca" alt="view full site" >View Full Site</a>
             </footer>
+        </section>
+        <!-- End Home page-->
+        
+        <!-- Begin about page-->
+        <section id="about" data-role="page">
+        	<header data-role="header">
+            	<a href="#" alt="back" data-rel="back" data-icon="back" data-role="button" data-iconpos="notext" data-transition="slide">Back</a>
+                <h1>Get the 'net</h1>
+            </header>
+            <article data-role="content">               
+                <!-- Begin Navigation-->
+                <div class="menu">
+                	<a href="#home" alt="home" data-icon="home" data-role="button" >Home</a>
+        		</div>
+                <div class="menu">
+                	<a href="#" alt="about me" data-icon="info" data-role="button" >About</a>
+        		</div>
+                <div class="menu">
+                	<a href="#contact" alt="contact" data-icon="gear" data-role="button" >Contact</a>
+        		</div>
+                 
+                 <div class="menu2">
+                 	<a href="#projects">
+                 		<div class="pic">
+                 			<img src="images/net-head logo.png" alt="projects"/>
+                    		<p>Projects</p>
+                 		</div>
+                 	</a>
+                    <a href="#services">
+                 		<div class="pic">
+                 		<img src="images/services.png" alt="services" class="service"/>
+                    		<p>Services</p>
+                 		</div>
+                 	</a>
+                 </div>
+                 <!-- End Navigation-->
+			</article>
             
+            <!-- Main Content Begin-->
+            <section class="main_content" id="aboutPage">
+            	<h1>About Me</h1>
+                <img src="images/chris_eastman.jpg" alt="chris eastman" id="chris"/>
+                <p>Name is Chris Eastman and I created Net-Head.ca.</p>
+
+				<p>For years now I have been studying everything computer related, I have graduated Web Animation and Design and am currently 		taking Computer Programming, both 2-year Programs at Georgian College in Barrie, Ontario. I have always loved working with technology and using the Internet to discover new things.</p>
+
+				<p>My main goal in the industry is to make a name for myself as a Web and Desktop developer. My Dream Job would be working on high-end video games, whether designing characters and environments or coding the logic and functionality itself. I am a self proclaimed video-game enthusiast and love to play almost any game out there!</p>
+
+				<p>Net-Head is meant to get my name some web presence, and showcase the skills I have accumulated over my years of being an information technology Student.</p>
+            </section>
+            <!-- Main content end-->
+            
+			<!-- Footer -->
+            <footer data-role="footer" data-position="fixed">
+            	<h3>Copyright &copy; Chris Eastman 2013</h3>
+            </footer>
+        </section>
+        <!-- end about page-->
+        
+        <!-- Begin Projects Page-->
+        <section id="projects" data-role="page">
+        	<header data-role="header">
+            	<a href="#" alt="back" data-rel="back" data-icon="back" data-role="button" data-iconpos="notext" data-transition="slide">Back</a>
+                <h1>Get the 'net</h1>
+            </header>
+            <article data-role="content">               
+                <!-- Begin Navigation-->
+                <div class="menu">
+                	<a href="#home" alt="home" data-icon="home" data-role="button" >Home</a>
+        		</div>
+                <div class="menu">
+                	<a href="#about" alt="about me" data-icon="info" data-role="button" >About</a>
+        		</div>
+                <div class="menu">
+                	<a href="#contact" alt="contact" data-icon="gear" data-role="button" >Contact</a>
+        		</div>
+                 
+                 <div class="menu2">
+                 	<a href="#">
+                 		<div class="pic">
+                 			<img src="images/net-head logo.png" alt="projects"/>
+                    		<p>Projects</p>
+                 		</div>
+                 	</a>
+                    <a href="#services">
+                 		<div class="pic">
+                 		<img src="images/services.png" alt="services" class="service"/>
+                    		<p>Services</p>
+                 		</div>
+                 	</a>
+                 </div>
+                 <!-- End Navigation-->
+			</article>
+            
+            <!-- Main Content Begin-->
+            <section class="main_content" id="projectsPage">
+            	<h1>Projects</h1>
+                <div>
+                	
+                </div>
+            <!-- Main content end-->
+            
+			<!-- Footer -->
+            <footer data-role="footer" data-position="fixed">
+            	<h3>Copyright &copy; Chris Eastman 2013</h3>
+            </footer>
         </section>
         
         
         
-          <!-- FlexSlider -->
+        
+  <!-- Provided and copyrighted by flexslider-->
   <script defer src="js/jquery.flexslider.js"></script>
 
   <script type="text/javascript">
@@ -97,7 +208,7 @@
       });
     });
   </script>
-  
+  <!-- end flexslider-->
   
 	</body>
 </html>
