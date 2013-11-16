@@ -1,10 +1,39 @@
-<!--
+<?php
+/*
 	Author: Chris Eastman
-    Site: net-head.ca/mobile
-    File: login.php
-    Purpose: allows users to log in and view secure content
--->
-
+    Site: Net-Head.ca/mobile
+    File Name: contactdata.php
+    Purpose: Retrieves information specific to the contact chosen
+*/
+session_start();
+	
+	try{
+	//database credentials
+	$mySQLUsername = 'my_sql_username';
+	$mySQLPassword = 'my_sql_password';
+	$dsn = 'mysql:host=my_sql_host.com;dbname=my_sql_dbname';
+	//create connection
+	$database = new PDO($dsn, $mySQLUsername, $mySQLPassword);
+	}
+	catch(PDOException $ex)
+	{
+		echo '<p>Sorry, there was a problem accessing the database.</p>
+			  <a href="login.php">Try Again</a>';	
+	}
+	
+	//grab contacts name from url
+	$current_contact = $_GET['name'];
+	
+	//prepare and execute select statement
+	$select = $database -> prepare("SELECT * FROM business_contacts where name='".$current_contact."' LIMIT 1");
+	$select -> execute();
+	
+	//save result
+	$result = $select -> fetch();
+	
+	//if username session still exists
+	if(isset($_SESSION["username"]))
+	{ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +68,6 @@
                 	<a href="business.php" alt="contact" data-icon="gear" data-role="button" >Business</a>
         		</div>
                 
-                 
                  <div class="menu2">
                  	<a href="index.html#projects">
                  		<div class="pic">
@@ -58,16 +86,21 @@
 			</article>
             <!-- Main Content Begin-->
             <section class="main_content" id="business">
-            	<h1>Login to view Business Contacts</h1>
-                <!-- Form for user to log in to the database-->
-                <form action="formhandler.php" method="post">
-                    Username: <input type="text" name="username" />
-                    <br>
-                    Password: <input type="password" name="password" />
-                    <br>
-                    <input type="submit" name="submit" value="submit" />
-                </form>
-            </section>
+			  	<h1>Contact Information</h1>
+                
+                <ul>
+                	<?php
+						//list selected contact's information
+							echo "<li>Name: ".$result["name"]."</li>
+								 <li>Address: ".$result["address"]."</li>
+								  <li>Phone Number: ".$result["phone"]."</li>
+								  <li>Email: ".$result["email"]."</li>";
+					?>
+                </ul>
+                <!-- Link to return to contacts list-->
+                <a href="business.php">Back to Contact List</a>
+				
+			  </section>
             <!-- Main content end-->
             
             <!-- Footer -->
@@ -80,3 +113,9 @@
         <!-- End Business page-->
 </body>
 </html>
+	<!-- If no session (they aren't signed in) return to login page-->
+	<?php }else{
+		header("Location: http://www.net-head.ca/login.php"); // redirects	
+	}
+?>
+?>

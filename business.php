@@ -1,10 +1,35 @@
-<!--
+<?php
+/*
 	Author: Chris Eastman
-    Site: net-head.ca/mobile
-    File: login.php
-    Purpose: allows users to log in and view secure content
--->
+	Site: Net-head.ca/mobile
+	File: business.php
+	Purpose: this page shows secure content to users who are logged in, or redirects them to the login page
+*/
+	session_start();
+	
+	try{
+	//database credentials
+	$mySQLUsername = 'my_sql_username';
+	$mySQLPassword = 'my_sql_password';
+	$dsn = 'mysql:host=my_sql_host.com;dbname=my_sql_dbname';
+	//create connection
+	$database = new PDO($dsn, $mySQLUsername, $mySQLPassword);
+	}
+	catch(PDOException $ex)
+	{
+		echo '<p>Sorry, there was a problem accessing the database.</p>
+			  <a href="login.php">Try Again</a>';	
+	}
 
+	//prepare select statement to show all business contacts
+	$select_statement = "SELECT * FROM business_contacts ORDER BY name;";
+	
+	//store results 
+	$result = $database->query($select_statement);
+	
+	//if session exists (user is logged in) show the content
+	if(isset($_SESSION["username"]))
+	{ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +64,6 @@
                 	<a href="business.php" alt="contact" data-icon="gear" data-role="button" >Business</a>
         		</div>
                 
-                 
                  <div class="menu2">
                  	<a href="index.html#projects">
                  		<div class="pic">
@@ -58,15 +82,19 @@
 			</article>
             <!-- Main Content Begin-->
             <section class="main_content" id="business">
-            	<h1>Login to view Business Contacts</h1>
-                <!-- Form for user to log in to the database-->
-                <form action="formhandler.php" method="post">
-                    Username: <input type="text" name="username" />
-                    <br>
-                    Password: <input type="password" name="password" />
-                    <br>
-                    <input type="submit" name="submit" value="submit" />
-                </form>
+            	<h1>Business Contacts</h1>
+                <p>Welcome <?php echo $_SESSION["username"]; ?>! <a href="logout.php">Logout</a></p>
+                <br>
+                <ul>
+                	<?php
+						//show each of the business contacts in a list, each with a link to their personal information
+						foreach($result as $row)
+						{
+							
+							echo "<li><a href=\"contactdata.php?name=".$row["name"]."\">".$row["name"]."</a>";
+						}
+					?>
+                </ul>
             </section>
             <!-- Main content end-->
             
@@ -80,3 +108,8 @@
         <!-- End Business page-->
 </body>
 </html>
+<?php
+	}else{
+		header("Location: http://www.net-head.ca/mobile/login.php"); // redirects		
+	}
+?>
