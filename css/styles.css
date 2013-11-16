@@ -16,7 +16,7 @@
 /*Main Styles*/
 /*Nav*/
 div.menu{
-	width:33%;	
+	width:25%;	
 	float:left;
 }
 
@@ -184,3 +184,22 @@ article.ui-content{
 	margin-bottom:10px;	
 }
 /*End Contact page*/
+
+/*Business Contacts Page*/
+#business > ul{
+	margin:0 auto;	
+}
+
+#business > ul > li{
+	list-style:none;
+	text-align:center;	
+}
+
+#business > p{
+	text-align:center;	
+}
+
+#business > a{
+	text-align:center;
+	margin:0 auto;	
+}
